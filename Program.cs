@@ -54,9 +54,11 @@ namespace Lab_8n9
                 
             } while (!indexCheck);
 
-            int x = [sNumber];
+            Console.WriteLine(sNumber);
 
-            Console.WriteLine("Student" + sNumber + " is" + );
+            info.GetFirstName();
+
+         
             Console.ReadLine();
 
         }
@@ -74,6 +76,18 @@ namespace Lab_8n9
         public string FirstName { set; get; }
         public string Location { set; get; }
         public string FavFood { set; get; }
+
+        public void SetFirstName(string name)
+        {
+            this.FirstName = name;
+        }
+
+        public string GetFirstName()
+        {
+            return this.FirstName;
+        }
+
+
     }
 
 
