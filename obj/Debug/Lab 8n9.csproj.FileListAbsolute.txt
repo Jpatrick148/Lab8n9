@@ -1,0 +1,7 @@
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\obj\Debug\Lab 8n9.csprojAssemblyReference.cache
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\obj\Debug\Lab 8n9.csproj.CoreCompileInputs.cache
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\bin\Debug\Lab 8n9.exe.config
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\bin\Debug\Lab 8n9.exe
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\bin\Debug\Lab 8n9.pdb
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\obj\Debug\Lab 8n9.exe
+C:\Users\JP\source\repos\Lab 8n9\Lab 8n9\obj\Debug\Lab 8n9.pdb
