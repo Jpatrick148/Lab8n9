@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Lab_8n9
 {
@@ -9,31 +10,31 @@ namespace Lab_8n9
         {
             
 
-            List<StudentInfo> info = new List<StudentInfo>();
+            List<Student> info = new List<Student>();
 
-            StudentInfo s = new StudentInfo("Katie", "Grand Rapids","Indian");
-            info.Add(s);
-            StudentInfo s1 = new StudentInfo("Andrew","Grand Haven","Chicken Wings");
-            info.Add(s1);
-            StudentInfo s2 = new StudentInfo("Chuck","Ripon","Almonds");
+            Student s = new Student("Katie", "Grand Rapids","Indian");
+            info.Add(s); 
+            Student s1 = new Student("Andrew","Grand Haven","Chicken Wings");
+            info.Add(s1); 
+            Student s2 = new Student("Chuck","Ripon","Almonds");
             info.Add(s2);
-            StudentInfo s3 = new StudentInfo("Jonathan","Alger","Tres Leche");
+            Student s3 = new Student("Jonathan","Alger","Tres Leche");
             info.Add(s3);
-            StudentInfo s4 = new StudentInfo("Tommy","Raleigh","Buttered Toast");
+            Student s4 = new Student("Tommy","Raleigh","Buttered Toast");
             info.Add(s4);
-            StudentInfo s5 = new StudentInfo("Jeremy","Milwaukee","Peanut Butter");
+            Student s5 = new Student("Jeremy","Milwaukee","Peanut Butter");
             info.Add(s5);
-            StudentInfo s6 = new StudentInfo("Joseph","Grand Rapids","Burritos");
+            Student s6 = new Student("Joseph","Grand Rapids","Burritos");
             info.Add(s6);
-            StudentInfo s7 = new StudentInfo("Justin","Wyoming","BURGER");
+            Student s7 = new Student("Justin","Wyoming","BURGER");
             info.Add(s7);
-            StudentInfo s8 = new StudentInfo("Sean","Grand Rapids","BBQ");
+            Student s8 = new Student("Sean","Grand Rapids","BBQ");
             info.Add(s8);
-            StudentInfo s9 = new StudentInfo("Kelsey","Grand Rapids","Grits");
+            Student s9 = new Student("Kelsey","Grand Rapids","Grits");
             info.Add(s9);
 
             int sNumber;
-            int totalIndex = info.Count;
+            int totalIndex = info.Count-1;
             bool indexCheck;
 
             do
@@ -54,41 +55,74 @@ namespace Lab_8n9
                 
             } while (!indexCheck);
 
-            Console.WriteLine(sNumber);
+            //for (int i = 0; i < info.Count; i++)
+            //{
+            //    Student a = info[i];
+            //    Console.WriteLine(i + " " +a.GetName());
 
-            info.GetFirstName();
+            //}
 
-         
+            Student picked = info[sNumber];
+
+            Console.WriteLine(picked.GetName());
+
+            Console.WriteLine("What would you like to know?");
+            Console.WriteLine("1) Home Town");
+            Console.WriteLine("2) Favorite Food");
+            string fh = Console.ReadLine();
+
+            if (fh == "1")
+            {
+                Console.WriteLine(picked.GetName() + " Home Town is " + picked.GetFood());
+            }
+            else if (fh == "2")
+            {
+                Console.WriteLine(picked.GetName() + " Favorite food is " + picked.GetHomeTown());
+            }
+            
+
+
+            //Console.WriteLine(picked.GetFood());
+            //Console.WriteLine(picked.GetHomeTown());
+
+            
+            
             Console.ReadLine();
 
         }
 
     }
 
-    public class StudentInfo
-    {
-        public StudentInfo(string firstName, string location,string favFood)
-        {
-            FirstName = firstName;           
-            Location = location;
-            FavFood = favFood;
-        }
-        public string FirstName { set; get; }
-        public string Location { set; get; }
-        public string FavFood { set; get; }
+    //public class StudentInfo
+    //{
+      
 
-        public void SetFirstName(string name)
-        {
-            this.FirstName = name;
-        }
+    //    public StudentInfo(string firstName, string location,string favFood)
+    //    {
+    //        FirstName = firstName;           
+    //        Location = location;
+    //        FavFood = favFood;
+    //    }
+    //    public string FirstName { set; get; }
+    //    public string Location { set; get; }
+    //    public string FavFood { set; get; }
 
-        public string GetFirstName()
-        {
-            return this.FirstName;
-        }
+    //    public void SetFirstName(string name)
+    //    {
+    //        this.FirstName = name;
+    //    }
+
+    //    public string GetFirstName()
+    //    {
+    //        return this.FirstName;
+    //    }
+
+        
 
 
-    }
+
+
+    //}
 
 
 }
